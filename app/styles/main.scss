@@ -6,12 +6,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 /*
  *Colors
  */
-$primary-pink : #E61052;
-$white        : #FFF;
-$bg-brown     : #EAE2D7;
-$primary-gray: #2A1F0F;
-$font-brown:  #97866F;
-$bg-footer-brown: #C9BBA9;
+$primary-pink    : #E61052;
+$white           : #FFF;
+$bg-brown        : #EAE2D7;
+$primary-gray    : #2A1F0F;
+$font-brown      : #97866F;
+$bg-footer-brown : #C9BBA9;
 
 
 /*
@@ -37,10 +37,20 @@ a {
   }
 }
 
+ul {
+  list-style: none;
+}
+
 
 /*
  *NAV
  */
+@media screen and (max-width: 1200px) {
+  .collapse.navbar-collapse {
+    display: none !important;
+  }
+}
+
 @mixin nav-tab() {
   &:hover, &:focus, &:active {
     color: $white;
@@ -53,13 +63,22 @@ a {
   }
 }
 
+.navbar {
+  margin-bottom: 40px;
+}
+
+.navbar-nav-static {
+
+}
+
 .nav-tab {
   @include nav-tab();
 
-  width: 185px;
+  width: 190px;
   padding: 0;
   background-color: #e61052;
   background-image: url("/images/dot_separator.png") bottom right; 
+  float:none;
 
   &:first-child {
     border-top-left-radius: 10px;
@@ -152,7 +171,6 @@ a {
 
   .site-map {
     padding: 0;
-    list-style: none;
   }
 
   .site-map-link {
@@ -162,7 +180,7 @@ a {
 
     border-left: 1px dotted #fff;
     border-right: 1px dotted #fff;
-    color: #97866f;
+    color: $font-brown;
     text-align: center;
 
     &:first-child {
@@ -170,3 +188,82 @@ a {
     }
   }
 }
+
+/*
+ *SIDECALLOUT
+ */
+@mixin hover-link() {
+  &:hover, &:focus, &:active {
+    background: $primary-gray !important;
+    outline: none;
+
+    a {
+      font-size: 13px;
+      color: $white;
+    }
+  }
+}
+
+.side-callout {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+  background-color: $white;
+
+  .callout-header {
+    padding: 0;
+    margin: 0 0 10px 0;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: $primary-pink;
+  }
+
+  .callout-link-group, .callout-text-group {
+    padding: 0;
+  }
+
+  .callout-link {
+    @include hover-link();
+
+    padding: 5px 0;
+
+    a {
+      font-size: 13px;
+      color: $font-brown;
+    }
+  }
+
+  .callout-text {
+    padding: 5px 0;
+
+    font-size: 13px;
+  }
+}
+
+/*
+ *HEADLINE
+ */
+
+.headline {
+  margin: 0 0 0 20px;
+}
+
+.headline-description {
+  font-size: 13px;
+}
+
+.headline-description.lead {
+  margin: 35px 0 5px 0;
+  font-size: 13px;
+  font-weight: 600;
+
+  color: $primary-pink;
+}
+
+.headline-image {
+
+}
+
+
