@@ -3,89 +3,142 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+/*
+ *Colors
+ */
+$primary-pink : #E61052;
+$white        : #FFF;
+$bg-brown     : #EAE2D7;
+$primary-gray: #2A1F0F;
+$font-brown:  #97866F;
 
+
+/*
+ *Typography
+ */
+$base-font: Arial, sans-serif;
+
+
+/*
+ *Base
+ */
 body {
   padding: 0;
+
+  font-family: $base-font;
+  color: $font-brown;
+  background: $bg-brown;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+a {
+  &:hover, &:active, &:focus {
+    text-decoration: none;
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+
+/*
+ *NAV
+ */
+@mixin nav-tab() {
+  &:hover, &:focus, &:active {
+    color: $white;
+    background: $primary-gray !important;
+    outline: none;
+  }
+
+  &.active {
+    background: $primary-gray;
+  }
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+.nav-tab {
+  @include nav-tab();
+
+  width: 185px;
+  padding: 0;
+  background-color: #e61052;
+  background-image: url("/images/dot_separator.png") bottom right; 
+
+  &:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    a {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
+  &:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    a {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+.nav-tab-link {
+  @include nav-tab();
+
+  font-size: 13px;
+  font-weight: 600;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  color: $white;
+}
 
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+/*
+ *Brand
+ */
+.nav-brand-box {
+  margin-top: 40px;
+}
+
+.nav-brand-logo {
+  display: inline-block;
+
+  width: 33%;
+
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.nav-brand-banner {
+  display: inline-block;
+
+  width: 33%;
+
+  margin-bottom: 40px;
+}
+
+.nav-search-box {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  .search-keyword-input {
+    width: 250px;
+
+    border: 0;
+    border-radius: 12px;
+    padding: 7px;
+
+    font-size: 13px;
+  }
+
+  .search-btn {
+    margin-left: 6px;
+    border-radius: 12px;
+
+    color: $white;
+    font-weight: 600;
+    font-size: 13px;
+
+    background-color: $primary-pink;
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
