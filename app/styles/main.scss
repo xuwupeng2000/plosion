@@ -11,6 +11,7 @@ $white        : #FFF;
 $bg-brown     : #EAE2D7;
 $primary-gray: #2A1F0F;
 $font-brown:  #97866F;
+$bg-footer-brown: #C9BBA9;
 
 
 /*
@@ -92,7 +93,7 @@ a {
 }
 
 /*
- *Brand
+ *BRAND
  */
 .nav-brand-box {
   margin-top: 40px;
@@ -101,7 +102,7 @@ a {
 .nav-brand-logo {
   display: inline-block;
 
-  width: 33%;
+  width: 38%;
 
   margin-left: 40px;
   margin-bottom: 40px;
@@ -110,15 +111,13 @@ a {
 .nav-brand-banner {
   display: inline-block;
 
-  width: 33%;
-
   margin-bottom: 40px;
 }
 
 .nav-search-box {
   display: inline-block;
 
-  margin-top: 12px;
+  margin: 12px;
 
   .search-keyword-input {
     width: 250px;
@@ -142,3 +141,32 @@ a {
   }
 }
 
+
+/*
+ *FOOTER
+ */
+
+.footer {
+  padding: 40px 0;
+  background-color: $bg-footer-brown;
+
+  .site-map {
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-map-link {
+    float: left;
+    width: 120px;
+    padding: 0 15px;
+
+    border-left: 1px dotted #fff;
+    border-right: 1px dotted #fff;
+    color: #97866f;
+    text-align: center;
+
+    &:first-child {
+      padding: 0;
+    }
+  }
+}
