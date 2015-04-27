@@ -30,9 +30,16 @@
               <a class='nav-tab-link-collapsed' href="#/">CONTACT US</a>
             </li>
           </ul>
+
+          <div class='nav-search-box-callapsed' >
+            <form>
+              <input ng-model='keyword' class='search-keyword-input' type="text" placeholder="Search X-Plosion..." maxlength="120" size="21" name="keyword" >
+              <input ng-click='searchKeyword(keyword)' type="submit" class="search-btn btn" value="SEARCH">
+            </form>
+          </div>
+
         </div>
       </div>
-
     </div>
 
     <!-- -container -->

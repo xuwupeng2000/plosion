@@ -211,11 +211,36 @@ ul {
   margin-bottom: 40px;
 }
 
+
+.nav-search-box-callapsed {
+  .search-keyword-input {
+    width: 100%;
+
+    border: 0;
+    border-radius: 12px;
+    padding: 7px;
+
+    font-size: 13px;
+  }
+
+  .search-btn {
+    width: 100%;
+
+    margin-top: 10px;
+    border-radius: 12px;
+
+    color: $white;
+    font-weight: 600;
+    font-size: 13px;
+
+    background-color: $primary-pink;
+  }
+}
+
 .nav-search-box {
   display: inline-block;
 
   margin: 12px;
-
   .search-keyword-input {
     width: 250px;
 
