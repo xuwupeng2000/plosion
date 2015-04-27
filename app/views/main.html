@@ -24,14 +24,14 @@
 
           <div class='nav-brand-banner'> 
             <a href="#/">
-              <img src="/images/nav_brand_banner.png" alt="x-plosion-banner" height="63" width="241"> 
+              <imgsrc="/images/nav_brand_banner.png" alt="x-plosion-banner" height="63" width="241"> 
             </a>
           </div>
 
           <div class='nav-search-box  pull-right'>
-            <form action="#" method="post">
-              <input class='search-keyword-input' type="text" placeholder="Search X-Plosion..." maxlength="120" size="21" name="keyword" >
-              <input type="submit" class="search-btn btn" value="SEARCH">
+            <form>
+              <input ng-model='keyword' class='search-keyword-input' type="text" placeholder="Search X-Plosion..." maxlength="120" size="21" name="keyword" >
+              <input ng-click='searchKeyword(keyword)' type="submit" class="search-btn btn" value="SEARCH">
             </form>
           </div>
         </div>
@@ -69,8 +69,8 @@
 
 <div class="container">
   <div class='row'>
-    <!-- -main -->
     <div class='col-lg-8'> 
+      <!-- -headline -->
       <div class="headline row">
         <div class='col-lg-6'>
           <a href="#/">
@@ -100,12 +100,48 @@
           <img class='headline-image' src="/images/headline_product.png" alt="x-plosion-product"> 
         </div> 
       </div>
+      <!-- -end of headline-->
+
+      <!-- -gallery -->
+      <div class="gallery-wrapper row">
+        <div class='col-lg-12'>
+          <div class='gallery-arrow-wrapper left' ng-click='goUp()'>
+            <div class='gallery-left-arrow'> <a herf='#'> &lt; </a> </div>
+          </div>
+
+          <div class='gallery-arrow-wrapper right' ng-click='goDown()'>
+            <div class='gallery-right-arrow'> <a herf='#'> &gt; </a></div>
+          </div>
+
+          <div class='gallery-arrow-wrapper up'>
+            <div class='gallery-left-arrow'> <a herf='#' ng-click='goUp()'> UP </a> </div>
+            <div class='gallery-left-arrow'> <a herf='#' ng-click='goDown()'> DOWN  </a> </div>
+          </div>
+
+          <ul class='gallery'>
+            <li class='gallery-entry'  ng-repeat='image in galleryImages'>
+              <img class='gallery-img' ng-src="{{ image }}" alt="x-plosion-logo"> 
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <!-- -end of gallery -->
 
       <!-- -features -->
+      <div class="row feature-header">
+        <div class='col-lg-6 feature-section-left'>
+          <h4 class='feature-header-title'>X-PLOSION PRODUCTS</h4>
+        </div>
+
+        <div class='col-lg-6 feature-section-right'>
+          <h4 class='feature-header-title'>X-PLOSION EXPANSION</h4>
+        </div>
+      </div>
+
       <div class="row features">
-        <!-- -right features -->
+        <!-- -left features -->
         <div class='col-lg-6'>
-          <h4> X-PLOSION PRODUCTS </h4>
 
           <div class='feature-1'>
 
@@ -114,7 +150,7 @@
             </div>
 
             <div class="row">
-              <div class="col-lg-6 col-md-12">
+              <div class="col-lg-4 col-md-12">
                 <img class='feature-image' src="/images/feature_product.png" alt="x-plosion-product"> 
               </div>
 
@@ -134,7 +170,7 @@
             </div>
 
             <div class=row>
-              <div class="col-lg-6 col-md-12">
+              <div class="col-lg-4 col-md-12">
                 <img class='feature-image' src="/images/feature_green_flavour.png" alt="x-plosion-product"> 
               </div>
 
@@ -148,20 +184,18 @@
             </div>
           </div>
         </div>
-        <!-- -end of right features -->
+        <!-- -end of left features -->
 
-        <!-- -left feature -->
-        <div class='col-lg-6'>
-          <h4>X-PLOSION EXPANSION</h4>
-
+        <!-- -right feature -->
+        <div class='col-lg-6 feature-right'>
           <div class='feature-3'>
             <div class="row">
               <h5>X-Plosion is a hit in Japan</h5>
             </div>
 
             <div class="row">
-              <div class="col-lg-6 col-md-12">
-                IMAGE
+              <div class="col-lg-4 col-md-12">
+                <img class='feature-image' src="/images/feature_japan.png" alt="x-plosion-product"> 
               </div>
               <div class="col-lg-6 col-md-12">
                 <p>
@@ -179,7 +213,7 @@
             </div>
 
             <div class="row">
-              <div class="col-lg-6 col-md-12">
+              <div class="col-lg-4 col-md-12">
                 <img class='feature-image' src="/images/feature_elder_man.png" alt="x-plosion-product"> 
               </div>
 
@@ -193,14 +227,13 @@
             </div>
           </div>
         </div>
-        <!-- -end of left feature -->
+        <!-- -end of right feature -->
       </div>
       <!-- -end of features -->
     </div>
-    <!-- -end of main -->
 
     <!-- -callout -->
-    <div class='col-lg-4'> 
+    <div class='col-lg-4 side-callouts'> 
       <div class='side-callout social-media'>
         <h3 class='callout-header'> FOLLOW US </h3>
 
@@ -268,7 +301,7 @@
     <div class='row'>
       <div class='col-lg-6 col-md-12'>
         <div class='copy-right'>
-          (c) Copyright 2011 X-Piosion Ltd.
+          &copy; Copyright 2011 X-Piosion Ltd.
         </div>
       </div>
 
