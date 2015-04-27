@@ -13,7 +13,6 @@ $primary-gray    : #2A1F0F;
 $font-brown      : #97866F;
 $bg-footer-brown : #C9BBA9;
 
-
 /*
  *Typography
  */
@@ -61,14 +60,6 @@ ul {
   &.active {
     background: $primary-gray;
   }
-}
-
-.navbar {
-  margin-bottom: 40px;
-}
-
-.navbar-nav-static {
-
 }
 
 .nav-tab {
@@ -168,6 +159,7 @@ ul {
 .footer {
   padding: 40px 0;
   background-color: $bg-footer-brown;
+  margin-top: 40px;
 
   .site-map {
     padding: 0;
@@ -206,7 +198,7 @@ ul {
 
 .side-callout {
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   border-radius: 10px;
 
   background-color: $white;
@@ -222,6 +214,21 @@ ul {
 
   .callout-link-group, .callout-text-group {
     padding: 0;
+  }
+
+  .callout-social-link-group {
+    padding: 0 0 20px 0;
+  }
+
+  .callout-social-link {
+    float: left;
+    padding: 5px 0;
+    margin-right: 15px;
+
+    a {
+      font-size: 13px;
+      color: $font-brown;
+    }
   }
 
   .callout-link {
@@ -247,7 +254,7 @@ ul {
  */
 
 .headline {
-  margin: 0 0 0 20px;
+  padding: 20px 0;
 }
 
 .headline-description {
@@ -266,4 +273,74 @@ ul {
 
 }
 
+/*
+ *FEATURE
+ */
 
+.features {
+  padding: 20px;
+  border-radius: 10px;
+
+  background-color: $white;
+
+  h5 {
+    color: $primary-gray;
+    font-weight: 600;
+  }
+
+}
+
+.feature-link {
+  color: $primary-pink;
+}
+
+.feature-1, .feature-2, .feature-3, .feature-4 {
+  min-height: 235px;
+}
+
+/*
+ *ICONS
+ */
+
+span.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-arrow-pink {
+  width: 16px;
+  height: 16px;
+
+  margin-left: 8px;
+  background-image: url("/images/arrow_pink.png");
+}
+
+
+.icon-arrow-gray {
+  width: 16px;
+  height: 16px;
+
+  margin-right: 8px;
+  background-image: url("/images/arrow_gray.png");
+}
+
+.icon-facebook {
+  width: 22px;
+  height: 22px;
+
+  background-image: url("/images/facebook.png");
+}
+
+.icon-twitter {
+  width: 22px;
+  height: 22px;
+
+  background-image: url("/images/twitter.png");
+}
+
+.icon-google-plus {
+  width: 22px;
+  height: 22px;
+
+  background-image: url("/images/google_plus.png");
+}
