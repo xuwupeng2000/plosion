@@ -114,8 +114,9 @@ ul {
 
   width: 190px;
   padding: 0;
-  background-color: #e61052;
-  background-image: url("/images/dot_separator.png") bottom right; 
+  background-color: $primary-pink;
+  background-image: url("/images/dot_separator.png"); 
+  background-repeat: repeat-y;
   float:none;
 
   &:first-child {
@@ -235,67 +236,77 @@ ul {
  */
 @mixin hover-link() {
   &:hover, &:focus, &:active {
-    background: $primary-gray !important;
     outline: none;
 
     a {
       font-size: 13px;
-      color: $white;
+      text-decoration: underline;
     }
   }
 }
 
-.side-callout {
-  padding: 20px;
+.side-callouts {
   margin: 20px 0;
+}
+
+.side-callout {
+  margin-bottom: 20px;
+
   border-radius: 10px;
-
   background-color: $white;
+}
 
-  .callout-header {
-    padding: 0;
-    margin: 0 0 10px 0;
+.callout-header {
+  padding: 20px;
+  margin: 0 0 10px 0;
 
-    font-size: 15px;
-    font-weight: 600;
-    color: $primary-pink;
-  }
+  background-image: url("/images/dot_separator_horizontal.png"); 
+  background-repeat: repeat-x;
+  background-position: right bottom;
 
-  .callout-link-group, .callout-text-group {
-    padding: 0;
-  }
+  font-size: 15px;
+  font-weight: 600;
+  color: $primary-pink;
+}
 
-  .callout-social-link-group {
-    padding: 0 0 20px 0;
-  }
+.social-media, .randomly-selected, .where-u-can-find-us {
+  padding: 5px 20px 10px 20px; 
+}
 
-  .callout-social-link {
-    float: left;
-    padding: 5px 0;
-    margin-right: 15px;
+.callout-link-group, .callout-text-group {
+  padding: 0;
+}
 
-    a {
-      font-size: 13px;
-      color: $font-brown;
-    }
-  }
+.callout-social-link-group {
+  padding: 0 0 20px 0;
+}
 
-  .callout-link {
-    @include hover-link();
+.callout-social-link {
+  float: left;
+  padding: 5px 0;
+  margin-right: 32px;
 
-    padding: 5px 0;
-
-    a {
-      font-size: 13px;
-      color: $font-brown;
-    }
-  }
-
-  .callout-text {
-    padding: 5px 0;
-
+  a {
     font-size: 13px;
+    color: $font-brown;
   }
+}
+
+.callout-link {
+  @include hover-link();
+
+  padding: 5px 0;
+
+  a {
+    font-size: 13px;
+    color: $font-brown;
+  }
+}
+
+.callout-text {
+  padding: 5px 0;
+
+  font-size: 13px;
 }
 
 /*
@@ -303,7 +314,7 @@ ul {
  */
 
 .headline {
-  padding: 20px 0;
+  padding: 20px 0 0 0;
 }
 
 .headline-description {
@@ -331,25 +342,33 @@ ul {
 }
 
 .feature-header-title {
-  padding: 0 20px 10px 20px;
+  padding: 10px 20px;
   font-weight: 600;
   color: $white;
 }
 
 .feature-section-left {
-  padding: 20px 0 0 0;
   border-top-left-radius: 10px;
   background-color: $primary-pink;
+
+  background-image: url("/images/dot_separator.png"); 
+  background-repeat: repeat-y;
+  background-position: right; 
 }
 
 .feature-section-right {
-  padding: 20px 0 0 0;
   border-top-right-radius: 10px;
   background-color: $primary-pink;
 }
 
+.feature-separator {
+  background-image: url("/images/dot_separator_2.png");
+  background-position: right center;
+  background-repeat: repeat-y;
+}
+
 .features {
-  padding: 40px 20px;
+  padding: 0 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 
@@ -374,6 +393,10 @@ ul {
   min-height: 235px;
 }
 
+.feature-1, .feature-3 {
+  padding-top: 40px;
+}
+
 .feature-image {
   border: 1px solid $border-brown;
 }
@@ -387,12 +410,16 @@ span.icon {
   vertical-align: middle;
 }
 
+.icon-twitter, .icon-facebook, .icon-arrow-pink, .icon-arrow-gray, .icon-google-plus{
+  background-image: url("/images/sprites.png");
+}
+
 .icon-arrow-pink {
   width: 16px;
   height: 16px;
 
   margin-left: 8px;
-  background-image: url("/images/arrow_pink.png");
+  background-position: -45px -2px ;
 }
 
 .icon-arrow-gray {
@@ -400,28 +427,28 @@ span.icon {
   height: 16px;
 
   margin-right: 8px;
-  background-image: url("/images/arrow_gray.png");
+  background-position: 0 -2px ;
 }
 
 .icon-facebook {
   width: 22px;
   height: 22px;
 
-  background-image: url("/images/facebook.png");
+  background-position: -145px 0;
 }
 
 .icon-twitter {
   width: 22px;
   height: 22px;
 
-  background-image: url("/images/twitter.png");
+  background-position: -95px 0;
 }
 
 .icon-google-plus {
   width: 22px;
   height: 22px;
 
-  background-image: url("/images/google_plus.png");
+  background-position: -196px 0;
 }
 
 /*
@@ -493,3 +520,4 @@ span.icon {
   display: none;
   cursor: pointer;
 }
+
