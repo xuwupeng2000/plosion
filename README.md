@@ -7,6 +7,7 @@ This simple WebApp is created by Jack Wu.
 - Packages are managed by Bower
 - In order to dist this project as file some special confis are applied
 - No ng-route is used as template can not be accessed via file protocol
+- Works with Chrome, Firefox and IE11 
 
 ## Build & development
 
