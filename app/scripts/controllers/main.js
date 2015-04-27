@@ -9,17 +9,17 @@
  */
 angular.module('plosionApp')
   .controller('MainCtrl', function ($scope, $window) {
-    $scope.galleryImages = ['/images/gallery_entry_1.png', '/images/gallery_entry_2.png', '/images/gallery_entry_3.png']
+    $scope.galleryImages = ['/images/gallery_entry_1.png', '/images/gallery_entry_2.png', '/images/gallery_entry_3.png'];
 
-    $scope.searchKeyword = function(keyword) {
+    $scope.searchKeyword = function() {
       $window.alert('You are seraching');
     };
 
     $scope.goUp = function(){
-      $scope.galleryImages.push($scope.galleryImages.shift())
+      $scope.galleryImages.push($scope.galleryImages.shift());
     };
 
     $scope.goDown = function(){
-      $scope.galleryImages.unshift($scope.galleryImages.pop())
+      $scope.galleryImages.unshift($scope.galleryImages.pop());
     };
   });
