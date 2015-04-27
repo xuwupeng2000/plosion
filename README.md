@@ -1,5 +1,7 @@
 # X-Plosion
 
+## Open index.html in dist folder
+
 This simple WebApp is created by Jack Wu.
 - Scaffolding with Yeoman as AngularJS project
 - Packages are managed by Bower
