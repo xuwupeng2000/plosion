@@ -9,7 +9,7 @@
  */
 angular.module('plosionApp')
   .controller('MainCtrl', function ($scope, $window) {
-    $scope.galleryImages = ['/images/gallery_entry_1.png', '/images/gallery_entry_2.png', '/images/gallery_entry_3.png'];
+    $scope.galleryImages = ['images/gallery_entry_1.png', 'images/gallery_entry_2.png', 'images/gallery_entry_3.png'];
 
     $scope.searchKeyword = function() {
       $window.alert('You are seraching');

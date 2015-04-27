@@ -1,16 +1,17 @@
-# plosion
+# X-Plosion
 
 This simple WebApp is created by Jack Wu.
 - Scaffolding with Yeoman as AngularJS project
 - Packages are managed by Bower
-
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+- In order to dist this project as file some special confis are applied
+- No ng-route is used as template can not be accessed via file protocol
 
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
+Run `grunt build` for dist.
 
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+There is no specs are built for this project.

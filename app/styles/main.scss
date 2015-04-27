@@ -152,7 +152,7 @@ ul {
   width: 190px;
   padding: 0;
   background-color: $primary-pink;
-  background-image: url("/images/dot_separator.png"); 
+  background-image: url("../images/dot_separator.png"); 
   background-repeat: repeat-y;
   float:none;
 
@@ -324,7 +324,11 @@ ul {
   padding: 20px;
   margin: 0 0 10px 0;
 
-  background-image: url("/images/dot_separator_horizontal.png"); 
+  
+  /*
+   *Relative path is used for dist
+   */
+  background-image: url("../images/dot_separator_horizontal.png"); 
   background-repeat: repeat-x;
   background-position: right bottom;
 
@@ -411,7 +415,7 @@ ul {
   border-top-left-radius: 10px;
   background-color: $primary-pink;
 
-  background-image: url("/images/dot_separator.png"); 
+  background-image: url("../images/dot_separator.png"); 
   background-repeat: repeat-y;
   background-position: right; 
 }
@@ -422,7 +426,7 @@ ul {
 }
 
 .feature-separator {
-  background-image: url("/images/dot_separator_2.png");
+  background-image: url("../images/dot_separator_2.png");
   background-position: right center;
   background-repeat: repeat-y;
 }
@@ -471,7 +475,7 @@ span.icon {
 }
 
 .icon-twitter, .icon-facebook, .icon-arrow-pink, .icon-arrow-gray, .icon-google-plus{
-  background-image: url("/images/sprites.png");
+  background-image: url("../images/sprites.png");
 }
 
 .icon-arrow-pink {
