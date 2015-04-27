@@ -21,7 +21,6 @@ $border-gray     : #D6C5AA;
  */
 $base-font: Arial, sans-serif;
 
-
 /*
  *Base
  */
@@ -45,10 +44,14 @@ ul {
 
 
 /*
- *NAV
+ *RESPONSIVE
  */
 @media screen and (max-width: 1200px) {
-  .collapse.navbar-collapse {
+  .navbar-toggle {
+    display: block !important;
+  }
+
+  .navbar-fullwidth {
     display: none !important;
   }
 
@@ -96,6 +99,40 @@ ul {
     top: -30px;
   }
 }
+
+/*
+ *COLLAPSE NAVBAR
+ */
+.menu-button {
+  margin: 20px;
+}
+
+.menu-text {
+  color: $primary-pink;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+.nav-tab-link-collapsed {
+  color: $primary-pink;
+
+  &:hover, &:active, &:focus {
+    color: $white;
+    background: $primary-gray !important;
+  }
+}
+
+.nav-tab-link-collapsed.active {
+  background: $primary-gray !important;
+  color: $white;
+}
+
+
+/*
+ *FULLWIDTH NAVBAR
+ */
 
 @mixin nav-tab() {
   &:hover, &:focus, &:active {
@@ -329,10 +366,6 @@ ul {
   color: $primary-pink;
 }
 
-.headline-image {
-
-}
-
 /*
  *FEATURE
  */
@@ -520,4 +553,3 @@ span.icon {
   display: none;
   cursor: pointer;
 }
-
